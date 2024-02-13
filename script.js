@@ -24,3 +24,4 @@ function getWeather() {
           weatherInfo.innerHTML = 'Error fetching weather data. Please try again.';
       });
 }
+// https://api.openweathermap.org/data/2.5/weather?q=balangir&appid=03d467126321464d4ae9f8fde21ed351
