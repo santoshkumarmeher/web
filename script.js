@@ -14,6 +14,7 @@ function getWeather() {
           const country = data.sys.country;
           const windspeed = data.wind.speed;
           const icon = data.weather[0].icon;
+          
 
 
           weatherInfo.innerHTML = `
