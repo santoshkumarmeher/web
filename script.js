@@ -13,6 +13,7 @@ function getWeather() {
           const cityOutput = data.name;
           const country = data.sys.country;
           const windspeed = data.wind.speed;
+          const icon = data.weather[0].icon;
 
 
           weatherInfo.innerHTML = `
@@ -21,6 +22,7 @@ function getWeather() {
               <p>Humidity: ${humidity} % </p>
               <p>Description: ${description}</p>
               <p>Wind Speed: ${windspeed} m/s</p>
+              <p>Wind Icon Code: ${icon}</p>
           `;
       })
       .catch(error => {
