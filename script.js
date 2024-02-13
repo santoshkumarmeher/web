@@ -8,14 +8,19 @@ function getWeather() {
       .then(data => {
           const weatherInfo = document.getElementById('weather-info');
           const temperature = data.main.temp - 273.15; // Convert to Celsius
+          const humidity = data.main.humidity; // Convert to Celsius
           const description = data.weather[0].description;
           const cityOutput = data.name;
           const country = data.sys.country;
+          const windspeed = data.wind.speed;
+
 
           weatherInfo.innerHTML = `
               <p>Location: ${cityOutput}, ${country}</p>
               <p>Temperature: ${temperature.toFixed(2)}°C</p>
+              <p>Humidity: ${humidity} % </p>
               <p>Description: ${description}</p>
+              <p>Wind Speed: ${windspeed} m/s</p>
           `;
       })
       .catch(error => {
